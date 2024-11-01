@@ -1,0 +1,293 @@
+ @charset "utf-8";
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 不支援最大寬度，因此寬度預設為 100% */
+.ie6 img { width:100%; }
+html, body {
+	background-color: #c90210 !important;
+	color:#000;
+	font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+	position: relative;
+}
+.wrap {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	max-width: 600px;
+}
+.doll-img {
+	text-align: center;
+}
+.doll-title {
+	background: none;
+	width: 2rem;
+	top: -.05rem;
+	z-index: 100;
+}
+.doll-index, .doll-index-bd {
+	background-color: #f4a418;
+	background: #f4a418;
+	border-radius: 0;
+	overflow: hidden;
+}
+.machine-bg_bd {
+	background: url(../img/boxman_bg.png) bottom center/3.2rem 4.15rem repeat;
+    -webkit-background-size: 3.2rem 4.15rem;
+	height: 100%;
+	background-size: cover;
+	-webkit-background-size: cover;
+	margin-bottom: -1px;
+}
+.machine-bg_floor {
+	background: url(../img/sprite-bg-index.png) 50% -.43rem/3.2rem 2.93rem repeat;
+    -webkit-background-size: 3.2rem 2.93rem;
+    text-align: center;
+	margin-bottom: -1px;
+}
+.machine-bg_floor.open {
+	background-position: 50% -.68rem;
+}
+.doll-machine {
+	width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.level__medium .machine, .machine-bg_bot {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-radius: 0;
+	margin-bottom: -1px;
+	background: url(../img/sprite-bg-index.png) 0 0/3.2rem 2.93rem repeat;
+}
+.small {
+	background: url(../img/sprite-bg-index.png) 0 0/3.2rem 2.93rem repeat;
+	z-index: 1;
+	bottom: 0.54rem;
+    background-size: 44%;
+    height: .245rem;
+}
+#ex_doll_bet {
+	width: 100%;
+}
+.doll-index-ft {
+	padding: 0 0.08rem;
+	background: #e50012;
+	background: -moz-linear-gradient(top,  #e50012 0%, #850004 100%);
+	background: -webkit-linear-gradient(top,  #e50012 0%,#850004 100%);
+	background: linear-gradient(to bottom,  #e50012 0%,#850004 100%);
+	/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50012', endColorstr='#850004',GradientType=0 ); */
+}
+.doll-box__small {
+	bottom: .82rem;
+}
+.machine-clip {
+	top: .3rem;
+}
+.curtain_header {
+	width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+.curtain_left, .curtain_right {
+	position: absolute;
+    top: 0;
+    left: -13px;
+    z-index: 11;
+    width: 100px;
+    height: 90%;
+}
+.curtain_right {
+	-webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+	right: -13px;  
+	left: inherit;  
+}
+.curtain_left img, .curtain_right img {
+	height: 100%;
+	width: auto;
+}
+.bets-btn {
+	background: #0090ff;
+	text-shadow: 0 3px 1px #005ea6;
+	box-shadow: inset 0 -0.07rem 0 0 #005ea6;
+	-webkit-box-shadow: inset 0 -0.07rem 0 0 #005ea6;
+}
+.bets-btn.active, .bets-btn:active {
+	box-shadow: inset 0 -0.03rem 0 0 #005ea6;
+}
+.doll-bets-btn {
+	margin: 0.15rem .05rem;
+}
+.mask {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background: rgba(0,0,0,.5); */
+    z-index: 9;
+    display: none;
+}
+.footer_btn {
+	max-width: 600px;
+	width: 100%;
+	height: 0.45rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+	padding: 0 0.15rem;
+}
+.explain, .back_event {
+	position: static;
+	box-shadow: inset 0 -0.06rem 0 0 #005ea6;
+	height: .35rem;
+    line-height: .3rem;
+    font-size: .17rem;
+    width: 48%;
+    float: left;
+}
+.back_event {
+	float: right;
+}
+.explain:active, .back_event:active {
+	height: 0.33rem;
+	line-height: .31rem;
+	margin-top: 3px;
+}
+.stop {
+	width: 91%;
+    margin: 0.15rem auto;
+    background: #b0b1b1;
+    text-shadow: 0 3px 1px #676767;
+    box-shadow: inset 0 -0.07rem 0 0 #676767;
+    -webkit-box-shadow: inset 0 -0.07rem 0 0 #676767;
+}
+.stop:active {
+    box-shadow: inset 0 -0.04rem 0 0 #676767;
+    -webkit-box-shadow: inset 0 -0.04rem 0 0 #676767;
+/*     top: -.06rem;
+	height: .44rem; */
+}
+.machine-clip-line {
+	background: url('../img/boxman_clip_line.png') bottom center repeat-y;
+	background-position: 2px 2px !important;
+	background-size: 60%;
+    width: 10px;
+    height: 10rem;
+}
+.machine-clip-origin {
+	background: url('../img/boxman_clip_1.png') 0 0/1.4rem 1.88rem no-repeat;
+	background-size: 100%;
+    background-position: inherit !important;
+    width: 55px;
+    height: 55px;
+    bottom: .26rem;
+    z-index: 99;
+}
+.machine-clip-arm_item {
+	background: url('../img/boxman_clip_2.png') 0 0/1.4rem 1.88rem no-repeat;
+	background-position: inherit !important;
+    background-size: 100%;
+    width: 40px;
+    height: 67px;
+}
+.machine-clip {
+	width: .9rem;
+	height: .9rem;
+}
+.doll-rise {
+	left: -2%;
+	top: 78%;
+}
+.games-dialog-mod .packet-dialog .dialog-txt {
+	background-color: #ae0000;
+	border-radius: 0.2rem;
+	-webkit-border-radius: 0.2rem;
+	width: 88%;
+    left: 6%;
+    padding: 0.3rem;
+}
+.games-dialog-mod .packet-dialog .dialog-Btn {
+	margin-top: 0.3rem;
+}
+.games-dialog-mod {
+	max-width: 600px;
+    margin: auto;
+}
+#explain_content .dialog-txt {
+	margin-top: -13%;
+	padding: 0.15rem;
+}
+#explain_content .dialog-txt ul {
+	height: 1.8rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+#explain_content .dialog-txt ul li {
+	color: #fff;
+	text-align: left;
+	list-style-type: decimal;
+    margin: 10px 0 0px 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+#explain_content .dialog-txt ul a {
+    text-decoration: underline;
+    color: #55e5fd;
+}
+#explain_content .attention {
+	font-size: 18px;
+    line-height: 25px;
+    color: #76f1fd;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#explain_content .attention small {
+	font-weight: normal;
+}
+#doll-list {
+	width:10rem;
+}
+#doll-list__small {
+	width:15rem;
+	-webkit-animation: dollListMove__small 15s .1s cubic-bezier(0.43, 0.43, 0.56, 0.56) infinite both;
+	animation: dollListMove__small 15s .1s cubic-bezier(0.43, 0.43, 0.56, 0.56) infinite both;
+}
+.games-dialog-mod .packet-dialog {
+	-webkit-transition: All .35s ease-in-out;
+    transition: All .35s ease-in-out;
+}
+.machine-clip-arm {
+	width: 40px;
+}
+
+/* 豎屏 */
+@media (orientation: portrait) { 
+	#orientation 	{ display: none; }
+
+} 
+/* 橫屏  */
+@media (orientation: landscape) { 
+	#orientation 	{ display: block; }
+	#orientation p 	{ text-align: center; color: #fff; font-size: 0.25rem; margin-top: 20%; }
+}
+
+
+/*--- 共用 ---*/
+.hide { display: none; }
+.show { display: block; }
+
+
+
+@media only screen and (max-width: 380px) {
+	#explain_content .attention 	{ font-size: 16px; line-height: 20px; }
+}
+@media only screen and (max-width: 374px) {
+	.doll-box__small { bottom: .84rem; }
+}
+@media only screen and (max-width: 330px) {
+	.machine-bg_floor, .machine-bg_bd	{ margin-bottom: -1px; }
+}
+
